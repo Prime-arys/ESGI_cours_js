@@ -23,6 +23,30 @@ let b = 2;
 const c = 3;
 ```
 
+###### Objets
+- `{}` : objet  ex :
+``` javascript
+{a:1, b:2, c:3};// objet
+
+let obj = { // objet dans une variable
+    a:1, 
+    b:2, 
+    c:3
+};
+```
+- `obj.a` : accès à la propriété a de l'objet d ex : 
+``` javascript
+console.log(obj.a); // 1
+```
+- constante sur l'objet
+``` javascript
+const e = {a:1, b:2, c:3};
+e.a = 4;
+console.log(e);
+e = {a:4, b:5, c:6}; // erreur
+e.a = 4; // ok
+```
+
 ###### Tableau
 - `[]` : tableau  ex : 
 ``` javascript
@@ -40,7 +64,7 @@ console.log(e);
 e = [4, 5, 6]; // erreur
 e[0] = 4; // ok
 ```
-- tableau éclaté avec : `...`
+- tableau éclaté avec : `...` "[**_spread operator_**](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax)"
 ```js
 const arr = [1,2,3];
 console.log(arr); // [1,2,3]
@@ -86,9 +110,29 @@ const sum = function (a,b){
 const sum = (a,b) => a+b; //return inplicite
 ```
 
+
+
 ##### Autres
 - `console.log()` : affiche dans la console
 - `//` ou `/**/` : commentaire
+- `;` : fin de ligne (optionnel)
+- `"` ou `'` ou  `` : chaîne de caractère
+- `+` : concaténation
+- `=` : affectation
+- `==` : comparaison d'égalité
+- `===` : comparaison d'égalité (en fonction du type)
+- `&&` : ET; `||` : OU; `!` : NON; `!=` : différent;
+- `try` `catch` : gestion des testes et des erreurs
+  - ex : 
+  ```js
+    try {
+        console.log("try"); //fonction à tester
+    } catch (error) {
+        console.log("catch"); //fonction en cas d'erreur
+        console.log(error); //affiche l'erreur
+        //console.error(error); //affiche l'erreur
+    } 
+    ```
 - Camel case 
 ```js
  var anotherVariable = 2;
@@ -98,4 +142,17 @@ const sum = (a,b) => a+b; //return inplicite
 var TheNunber43 = 43;
 ```
 - [MDN](https://developer.mozilla.org/fr/docs/) : documentation JS
+- Ne pas utiliser JS pour faire des calculs Mathématiques
+  - ex : `0.1 + 0.2` = `0.30000000000000004`
+- objet iterable  : 
+  - ex : `for (let i of arr) { console.log(i); }`
+  - documentation : [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
+- Regex : [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res)
+  - ex : `let regex = /a/;`
+  - ex : `let regex = new RegExp("a");`
+  - ex with replace : [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace#utilisation_de_global_et_ignore_avec_replace)
+  - [DOC RegExp](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+  - [regex101](https://regex101.com/)
+
+
 

@@ -47,29 +47,30 @@ function tab_recherche(term,tab){
     return r;
 }
 if(tab_recherche("Corbeau",oiseaux)){
-    console.log("Dans le tableu")
+    console.log("Dans le tableu");
 } else {
-    console.log("N'est pas dans le tableau")
+    console.log("N'est pas dans le tableau");
 }
 
 //7
 const pays = ["France","Belgique","Suisse","Angletaire","Allemagne","Espagne"];
-console.log("pays : ",pays.sort())
+console.log("pays : ",pays.sort());
 
 //8
 const mois = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
-console.log("3e mois : ",mois[3-1])
+console.log("3e mois : ",mois[2]);
 
 //9
 const num = [];
 let al;
+//génération tableau, valeurs aléatoires
 for(let i=0;i<10;i+=1){
     al = Math.round(Math.random()*100);
     num.push(al);
 }
 console.log(num)
-console.log(Math.min(...num)) // ... : renvoie les données du tableau (éclate les données)
-console.log(Math.max(...num))
+console.log(Math.min(...num)); // ... : renvoie les données du tableau (éclate les données)
+console.log(Math.max(...num));
 
 //10
 const phrase =[
