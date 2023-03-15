@@ -97,12 +97,21 @@ function fetch_somme_pokemon(){
     return fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
 }
 
+function doPKM(arg){
+    console.log(arg);
+    let o = Math.floor(Math.random() * 150);
+    console.log(o+1," : ",arg.results[o].name); //nom et n° d'un pokemon aléatoire dans la liste obtenue 
+}
+
 const pokemon = fetch_somme_pokemon().then((http_rseponse) => {
     console.log(http_rseponse);
     return http_rseponse.json()
-}).then((pokemon_liste)=> {
-    console.log(pokemon_liste);
-    return pokemon_liste;
+}).then((pokemon_liste) => {
+    //console.log(pokemon_liste);
+    doPKM(pokemon_liste);
+    
 });
+
+
 
 
