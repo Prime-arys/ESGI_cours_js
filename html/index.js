@@ -44,26 +44,26 @@ btn.addEventListener('click', () => {
     //titre de la page
     document.title = inp_t.value;
     //alert(inp_t.value);
-    paragraphe.innerHTML = "<p id='paragraphe' class='mytext'>Bonjour vous, " + inp_t.value + "</p>";
+    paragraphe.innerHTML = "Bonjour vous, " + inp_t.value;
 })
 
 const promise = new Promise((resolve, reject) =>{
     setTimeout(() => {
         const randomNumber = Math.floor(Math.random() * 10)
         if (randomNumber % 2 === 0) {
-            resolve(randomNumber)
+            resolve(randomNumber);
            
         } else {
-            reject(new Error('Le nombre est impair.'))
+            reject(new Error('Le nombre est impair.'));
         }
         
     
-    }, 1000)
+    }, 500)
     
 })
 promise 
-    .then(result => console.log("nombre : ",result))
-    .catch(error => console.error(error.message))
+    .then(result => console.log("nombre : ",result)) // retoure de 'resolve', avec console.log du resultat ("ce fait après fin execution promesse")
+    .catch(error => console.error(error.message)); // retoure de 'reject', avec console.log du resultat
 
 inp_to.value = '1';
 inp_to[0].checked = true;
@@ -91,4 +91,18 @@ inp_to.forEach((inp) => {
 
     })
 })
+
+
+function fetch_somme_pokemon(){
+    return fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+}
+
+const pokemon = fetch_somme_pokemon().then((http_rseponse) => {
+    console.log(http_rseponse);
+    return http_rseponse.json()
+}).then((pokemon_liste)=> {
+    console.log(pokemon_liste);
+    return pokemon_liste;
+});
+
 

@@ -153,6 +153,8 @@ var TheNunber43 = 43;
   - ex with replace : [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace#utilisation_de_global_et_ignore_avec_replace)
   - [DOC RegExp](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
   - [regex101](https://regex101.com/)
+- API fetch [MDN](https://developer.mozilla.org/fr/docs/Web/API/Fetch_API)
+- Promise [MDN](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 
 
