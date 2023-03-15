@@ -46,9 +46,36 @@
         </div>
     </div>
 
-    <h2 class="mytext">Hi.</h2>
+    <h2 id="bt_text"class="mytext">Hi light</h2>
 
     <script src="index.js"></script>
+    <script>
+        const somme_text = document.getElementById('bt_text');
+        const select_t_2 = document.getElementById('select1');
+        const pg1 = document.getElementById("p1")
+        //alert("Hello");
+        select_t_2.addEventListener('change', () => {
+            if (select_t_2.value === '1') {
+                somme_text.textContent = "Hi light";
+            } else {
+                somme_text.textContent = "Hi dark";
+            }
+        })
+        console.log(pg1);
+        pg1.textContent = "Oh WOW";
+        pg1.innerHTML = "<h1 id='p1'> ©👀 </h1>";
+        pg1.style.color = "red";
+
+        /*
+        const nw_div = document.createElement("div");
+        nw_div.appendChild(pg1);
+        */
+
+        //pg1.remove()
+        
+        
+
+    </script>
     
 </body>
 </html>
