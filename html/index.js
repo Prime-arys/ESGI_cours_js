@@ -4,7 +4,7 @@ const btn = document.getElementById('btn1');
 const inp_t = document.getElementById('input1');
 const select_t = document.getElementById('select1');
 const img_t = document.getElementById('img1');
-
+const paragraphe = document.getElementById('paragraphe');
 
 const themes ={
     light: {
@@ -28,6 +28,8 @@ const setTheme = (theme) => {
 }
 
 
+select_t.value = '1'; //valeur par défaut pour le changement de la page
+
 select_t.addEventListener('change', () => {
     if (select_t.value === '1') {
         setTheme(themes.light);
@@ -41,10 +43,30 @@ select_t.addEventListener('change', () => {
 btn.addEventListener('click', () => {
     //titre de la page
     document.title = inp_t.value;
-    alert(inp_t.value);
+    //alert(inp_t.value);
+    paragraphe.innerHTML = "<p id='paragraphe' class='mytext'>Bonjour vous, " + inp_t.value + "</p>";
 })
 
+const promise = new Promise((resolve, reject) =>{
+    setTimeout(() => {
+        const randomNumber = Math.floor(Math.random() * 10)
+        if (randomNumber % 2 === 0) {
+            resolve(randomNumber)
+           
+        } else {
+            reject(new Error('Le nombre est impair.'))
+        }
+        
+    
+    }, 1000)
+    
+})
+promise 
+    .then(result => console.log("nombre : ",result))
+    .catch(error => console.error(error.message))
 
+inp_to.value = '1';
+inp_to[0].checked = true;
 inp_to.forEach((inp) => {
     inp.addEventListener('change', () => {
         img_t.setAttribute('class' , 'myanm', 'myanm2');
