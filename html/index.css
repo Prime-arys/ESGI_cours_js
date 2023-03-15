@@ -1,0 +1,98 @@
+:root{
+    --primary-color: #4453d4;
+    --secondary-color: #36352b;
+    --background-color: #dfdfdd;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.mytitle{
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mytext{
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.mybutton{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.mybutton:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/*annimation*/
+@keyframes myanimation{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+
+.myanm{
+    animation: myanimation 1s linear;
+}
+
+@keyframes myanimation2{
+    0%{
+        scale: 1;
+}  50%{
+        scale: 1.5;
+}   100%{
+        scale: 1;
+}
+}
+
+.myanm2{
+    animation: myanimation2 0.5s linear;
+}
+
+
+@keyframes myanimation3{
+    0%{
+        transform: scale(2);
+        opacity: 0.0;
+    }
+
+    20%{
+        transform: scale(3);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.myanm3{
+    animation: myanimation3 1s;
+}
