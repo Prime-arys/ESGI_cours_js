@@ -1,7 +1,11 @@
 :root{
     --primary-color: #4150de;
     --secondary-color: #36352b;
-    --background-color: #dfdfdd;
+    --background-color: hsl(60, 1%, 87%);
+}
+
+body{
+    background-color: var(--background-color);
 }
 
 .my_btn{
@@ -16,4 +20,10 @@
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+}
+
+.my_img{
+    width: fit-content;
+    height: fit-content;
+    
 }
