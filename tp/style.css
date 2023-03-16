@@ -56,6 +56,7 @@ body{
 
 .my_loading{
     visibility: var(--loader);
+    color: var(--secondary-color);
 }
 
 #titre{
