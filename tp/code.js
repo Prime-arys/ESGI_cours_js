@@ -6,6 +6,7 @@ const source_lnk = document.getElementById('source_lnk');
 const artist_name = document.getElementById('artist_name');
 const artist_url = document.getElementById('artist_url');
 const artist_url_lnk = document.getElementById('artist_url_lnk');
+const select_t = document.getElementById('select1');
 
 
 
@@ -58,7 +59,42 @@ img1.addEventListener('click',()=>{
 })
 
 
+const themes ={ //définition des thèmes dans un objet
+    light: {
+        primary: '#4453d4',
+        secondary: '#36352b',
+        background: '#dfdfdd',
+        complete : "#d3d3cf"
+    },
+    dark: {
+        primary: '#d4a251',
+        secondary: '#e7e7e7',
+        background: '#2b2c36',
+        complete : "#1b1c26"
+    }
+}
 
+//fonction qui permet de changer le thème en changeant les variables css
+const setTheme = (theme) => {
+    document.documentElement.style.setProperty('--primary-color', theme.primary);
+    document.documentElement.style.setProperty('--secondary-color', theme.secondary);
+    document.documentElement.style.setProperty('--background-color', theme.background);
+    document.documentElement.style.setProperty('--complete-color', theme.complete);
+    //console.log('setTheme');
+    //console.log(theme);
+}
+
+select_t.value = '1'; //valeur par défaut pour le changement de la page
+
+select_t.addEventListener('change', () => { //lorsque que l'on change la valeur du select
+    if (select_t.value === '1') {
+        setTheme(themes.light);
+        //console.log('light');
+    } else {
+        setTheme(themes.dark);
+        //console.log('dark');
+    }
+})
 
 
 /*fetch('https://nekos.best/api/v2/neko')

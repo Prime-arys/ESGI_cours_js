@@ -1,8 +1,8 @@
 :root{
     --primary-color: #4150de;
     --secondary-color: #36352b;
-    --background-color: hsl(60, 1%, 90%);
-    --light-color: hsl(60, 4%, 82%);
+    --background-color: hsl(60, 2%, 90%);
+    --complete-color: hsl(60, 4%, 82%);
     --loader : collapse;
     --load : relative;
 }
@@ -26,7 +26,7 @@ body{
 }
 
 .my_btn:hover{
-    background-color: var(--light-color);
+    background-color: var(--complete-color);
     color: var(--primary-color);
 }
 
@@ -60,6 +60,24 @@ body{
 
 #titre{
     padding: 8px;
-    background-color: var(--light-color);
+    background-color: var(--complete-color);
     font-weight: 700;
+    color: var(--secondary-color)
+}
+
+.interaction{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#select1{
+    font-size: 2em;
+    width: fit-content;
+    background-color: var(--complete-color);
+    color: var(--secondary-color);
+}
+
+.text_titre{
+    color: var(--secondary-color);
 }
