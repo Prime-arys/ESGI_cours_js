@@ -1,3 +1,4 @@
+// © Robin CHAUSSY
 const btn = document.getElementById('btn');
 const img1 = document.getElementById('img1');
 const source = document.getElementById('source');
@@ -22,7 +23,7 @@ function neko(){
                 console.log(json.results[0].artist_href)
                 img1.src = json.results[0].url; //on définit l'url de l'image retourné
 
-                source.textContent = json.results[0].source_url;
+                source.textContent = json.results[0].source_url; 
                 source_lnk.href = json.results[0].source_url;
 
                 artist_name.textContent = json.results[0].artist_name;
@@ -34,7 +35,7 @@ function neko(){
             })
             .then(() => {
                 img1.onload = () => { // on réaffiche l'image un fois qu'elle est chargée
-                    console.log("ld");
+                    //console.log("ld");
                     document.documentElement.style.setProperty('--loader', 'collapse');
                     document.documentElement.style.setProperty('--load', 'relative');
                 }
@@ -46,7 +47,7 @@ neko(); //première image au chargement de la page
 
 // lorsque que le bouton est cliqué
 btn.addEventListener('click', ()=>{
-    console.log('click');
+    //console.log('click');
     neko();
     
 })

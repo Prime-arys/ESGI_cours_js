@@ -2,7 +2,7 @@
     --primary-color: #4150de;
     --secondary-color: #36352b;
     --background-color: hsl(60, 1%, 90%);
-    --light-color: hsl(60, 4%, 80%);
+    --light-color: hsl(60, 4%, 82%);
     --loader : collapse;
     --load : relative;
 }
@@ -15,7 +15,7 @@ body{
     background-color: var(--primary-color);
     color: var(--background-color);
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 650;
     text-align: center;
     margin: 1em;
     padding: 0;
@@ -40,7 +40,7 @@ body{
 }
 
 .my_img:hover{
-    opacity: 94%;
+    opacity: 92%;
 }
 
 .my_center{
@@ -55,6 +55,11 @@ body{
 }
 
 .my_loading{
-
     visibility: var(--loader);
+}
+
+#titre{
+    padding: 8px;
+    background-color: var(--light-color);
+    font-weight: 700;
 }
