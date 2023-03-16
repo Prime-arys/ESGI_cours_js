@@ -1,7 +1,8 @@
 :root{
     --primary-color: #4150de;
     --secondary-color: #36352b;
-    --background-color: hsl(60, 1%, 87%);
+    --background-color: hsl(60, 1%, 90%);
+    --light-color: hsl(60, 4%, 80%);
     --loader : collapse;
     --load : relative;
 }
@@ -24,12 +25,22 @@ body{
     cursor: pointer;
 }
 
+.my_btn:hover{
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
 .my_img{
    
     height: 28em;
     width: auto;
     display: var(--load);
+    cursor: pointer;
 
+}
+
+.my_img:hover{
+    opacity: 94%;
 }
 
 .my_center{

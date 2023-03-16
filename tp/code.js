@@ -30,8 +30,6 @@ function neko(){
                 artist_url.textContent = json.results[0].artist_href;
                 artist_url_lnk.href = json.results[0].artist_href;
 
-                
-                
 
             })
             .then(() => {
@@ -51,6 +49,11 @@ btn.addEventListener('click', ()=>{
     console.log('click');
     neko();
     
+})
+
+//image clickable
+img1.addEventListener('click',()=>{
+    window.open(img1.src); //s'ouvre dans un nouvelle onglet
 })
 
 
