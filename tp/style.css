@@ -23,7 +23,8 @@ body{
 }
 
 .my_img{
-    width: fit-content;
-    height: fit-content;
-    
+   
+    height: 24em;
+    width: auto;
+
 }
