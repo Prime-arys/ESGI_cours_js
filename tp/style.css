@@ -24,7 +24,18 @@ body{
 
 .my_img{
    
-    height: 24em;
+    height: 28em;
     width: auto;
+
+}
+
+.my_center{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.my_dv_btn{
+    position:relative;
 
 }
