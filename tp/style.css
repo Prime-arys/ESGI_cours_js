@@ -2,6 +2,8 @@
     --primary-color: #4150de;
     --secondary-color: #36352b;
     --background-color: hsl(60, 1%, 87%);
+    --loader : collapse;
+    --load : relative;
 }
 
 body{
@@ -26,6 +28,7 @@ body{
    
     height: 28em;
     width: auto;
+    display: var(--load);
 
 }
 
@@ -38,4 +41,9 @@ body{
 .my_dv_btn{
     position:relative;
 
+}
+
+.my_loading{
+
+    visibility: var(--loader);
 }
