@@ -4,6 +4,8 @@
 - `exercice_*.js` : exercices du cours
 - `index.js` : fichier de test pour les exercices
 - `README.md` : ce fichier
+- `tp/` : dossier contenant le TP du cours
+- `html/` : dossier contenant des fichiers pour les exercices et tests
 
 #### © R.CHAUSSY tous droits réservés
 

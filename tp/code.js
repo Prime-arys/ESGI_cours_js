@@ -1,4 +1,4 @@
-// © Robin CHAUSSY
+// © R.CHAUSSY
 const btn = document.getElementById('btn');
 const img1 = document.getElementById('img1');
 const source = document.getElementById('source');
@@ -84,7 +84,21 @@ const setTheme = (theme) => {
     //console.log(theme);
 }
 
-select_t.value = '1'; //valeur par défaut pour le changement de la page
+const tm = new Date().getHours();
+        //mode sombre : 22h-8h
+        //mode claire : 8h-22h
+const mybool = (tm>=8 & tm <=21);
+
+
+if (mybool) {
+    setTheme(themes.light);
+    //console.log('light');
+    select_t.value = '1'; //valeur par défaut pour le changement de la page
+} else {
+    setTheme(themes.dark);
+    //console.log('dark');
+    select_t.value = '2';
+}
 
 select_t.addEventListener('change', () => { //lorsque que l'on change la valeur du select
     if (select_t.value === '1') {
