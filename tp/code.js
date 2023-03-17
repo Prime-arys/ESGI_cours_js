@@ -73,10 +73,10 @@ const themes ={ //définition des thèmes dans un objet
         complete : "#1b1c26"
     },
     uwu: {
-        primary: '#2DB3AC',
+        primary: '#F3FF66',
         secondary: '#FFE466',
-        background: '#B32498',
-        complete : "#FF4DDE"
+        background: '#e424a8',
+        complete : "#AA40FF"
     }
 
 }

@@ -96,3 +96,7 @@ body{
 
 }
 
+#artist_url,#source{
+    
+    color: var(--primary-color);
+}
