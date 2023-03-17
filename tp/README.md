@@ -3,9 +3,9 @@
 <br>
 
 ### Crédits API
-NekoBEST API: https://nekos.best/api/v2/neko
+NekoBest API: https://nekos.best/api/v2/neko
 <br>
-NekoBEST API Docs: https://docs.nekos.best/
+NekoBest API Docs: https://docs.nekos.best/
 <br>
 _Renvoie une image de "neko girls"_ ainsi que ses informations relatives.
 

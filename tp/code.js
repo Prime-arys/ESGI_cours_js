@@ -71,7 +71,14 @@ const themes ={ //définition des thèmes dans un objet
         secondary: '#e7e7e7',
         background: '#2b2c36',
         complete : "#1b1c26"
+    },
+    uwu: {
+        primary: '#2DB3AC',
+        secondary: '#FFE466',
+        background: '#B32498',
+        complete : "#FF4DDE"
     }
+
 }
 
 //fonction qui permet de changer le thème en changeant les variables css
@@ -101,14 +108,30 @@ if (mybool) {
 }
 
 select_t.addEventListener('change', () => { //lorsque que l'on change la valeur du select
-    if (select_t.value === '1') {
-        setTheme(themes.light);
-        //console.log('light');
-    } else {
-        setTheme(themes.dark);
-        //console.log('dark');
+    switch (select_t.value) {
+        case '1':
+            setTheme(themes.light);
+            break;
+        case '2':
+            setTheme(themes.dark);
+            break;
+        case '3':
+            setTheme(themes.uwu);
+            break;
     }
 })
+
+window.onload = () => {
+    const fun = Math.floor(Math.random() * 100);
+    if (fun == 1) {
+        // on ajoute un nouveau noeud à select
+        const newOption = document.createElement("option");
+        newOption.value = '3';
+        newOption.textContent = 'UwU';
+        select_t.appendChild(newOption);
+    }
+
+}
 
 
 /*fetch('https://nekos.best/api/v2/neko')
