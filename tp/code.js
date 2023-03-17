@@ -21,10 +21,10 @@ function neko(){
     const neko_apl = fetch_neko()
             .then(response => response.json()) //on recupère les données
             .then((json) => {
-                console.log(json.results[0].artist_href)
+                //console.log(json.results[0].artist_href)
                 img1.src = json.results[0].url; //on définit l'url de l'image retourné
 
-                source.textContent = json.results[0].source_url; 
+                source.textContent = json.results[0].source_url; //on définit l'informations (source) retourné dans la balise
                 source_lnk.href = json.results[0].source_url;
 
                 artist_name.textContent = json.results[0].artist_name;
@@ -37,7 +37,7 @@ function neko(){
             .then(() => {
                 img1.onload = () => { // on réaffiche l'image un fois qu'elle est chargée
                     //console.log("ld");
-                    document.documentElement.style.setProperty('--loader', 'collapse');
+                    document.documentElement.style.setProperty('--loader', 'collapse'); // (setProperty permet de changer la valeur d'une variable css)
                     document.documentElement.style.setProperty('--load', 'relative');
                 }
             

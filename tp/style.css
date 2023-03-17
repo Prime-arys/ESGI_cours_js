@@ -82,3 +82,17 @@ body{
 .text_titre{
     color: var(--secondary-color);
 }
+
+.footer-text{
+    
+    color: var(--secondary-color);
+    margin: 1em;
+    
+}
+
+.footer-link{
+    
+    color: var(--secondary-color);
+
+}
+
